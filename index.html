@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRP TUNES</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="app-box">
+        <header class="app-header">
+            <img src="images/android-chrome-192x192.png" alt="Music Icon" class="header-icon">
+            <h1>DRP TUNES</h1>
+        </header>
+<div class="mainitem">
+    <section class="new_song">
+        <h2>ENTER NEW SONG HERE</h2>
+        <form id="song_Form">
+            <label for="songTitle" class="songTitleLabel">Title:</label>
+            <input type="text" id="songTitle" name="title" placeholder="Enter song title">
+
+            <label for="artistName" class="artistLabel">Artist:</label>
+            <input type="text" id="artistName" name="artist" placeholder="Enter artist name">
+
+            <button type="submit" class="submit_btn">Add Song</button>
+        </form>
+        <p id="warningMsg" >Please fill both fields.</p>
+    </section>
+
+    <section class="song_list">
+        <h2>LIST OF SONGS</h2>
+        <ul id="songList">
+            <li>
+                <span class="song_name">Falling into You</span> 
+                <span class="song_artist"> ~ Celine Dion</span>
+            </li>
+            <li>
+                <span class="song_name">Crazy</span> 
+                <span class="song_artist"> ~ Aerosmith</span>
+            </li>
+        </ul>
+    </section>
+</div>
+        
+<button id="install-button" style="display: none;">Install App</button>
+    </div>
+
+
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
