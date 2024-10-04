@@ -33,29 +33,29 @@ if ('serviceWorker' in navigator) {
 }
 
 
-let deferredPrompt;
+let defPrompt;
 
 window.addEventListener('beforeinstallprompt', (event) => {
         console.log('event fired');
     event.preventDefault();
     deferredPrompt = event;
-    InstallButton();
+    Installbtn();
 });
 
-function InstallButton() {
+function Installbtn() {
     const installButton = document.getElementById('install-button');
     installButton.style.display = 'block';
     
     installButton.addEventListener('click', async () => {
         installButton.style.display = 'none';
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        deferredPrompt = null;
+        defPrompt.prompt();
+        const { outcome } = await defPrompt.userChoice;
+        defPrompt = null;
     });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const installButton = document.getElementById('install-button');
+    const installButton = document.getElementById('install_btn');
     installButton.style.display = 'none';
 });
  
